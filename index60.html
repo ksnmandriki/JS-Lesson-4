@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>index60</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/**Используя методы работы с массивами написать функцию, которая вычисляет число  Фибоначчи —  это ряд чисел, где 
+каждое последующее является суммой двух предыдущих. Первые десять чисел выглядят следующим образом: 0, 1, 1, 2, 3, 
+5, 8, 13, 21, 34. Пример: Пользователь ввел значение 7, функция fibonacci(7) => 13. Все запуски функции вашего сценария 
+должны работать быстро (т.е. вызов функции в браузере должен занимать не более доли секунды). Сохраните полученный 
+результат под именем index60.html. */
+
+function fib1(n) {
+  let a = 1;
+  let b = 1;
+  for (let i = 3; i <= n; i++) {
+    let c = a + b;
+    a = b;
+    b = c;
+  }
+  return b;
+}
+window.alert(fib1(1000));
+
+
+let SQRT5 = Math.sqrt(5);
+let PHI = (SQRT5 + 1) / 2;
+
+function fib2(n){
+	
+    return Math.pow(PHI, n) / SQRT5 + 0.5;
+}
+window.alert(fib2(1000).toFixed());
+		</script>
+	</body>
+</html>

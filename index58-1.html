@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>index58</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      /**Есть массив,  нужно  создать отфильтрованный  массив, все элементы которого больше или равны  99,
+       * а все меньшие 99 удалены. Сохраните полученный результат под именем index58.html*/
+      let arr1 = [5000, 98, 54, 150, 120, 500, 56, 120, 98, 200, 82, 2, 99, 18];
+      arr1.sort();
+      let arr = [99];
+      window.alert(arr1);
+      for (let i = 0; i < arr1.length; i++) {
+        if (arr1[i] > arr[arr.length - 1]) {
+          arr.unshift(arr1[i]);
+        }
+      }
+      window.alert(arr.reverse());
+    </script>
+  </body>
+</html>
