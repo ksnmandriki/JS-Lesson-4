@@ -9,9 +9,9 @@
 	<body>
 		<script type="text/javascript">
 			const fill = (arraySize, value) => new Array(arraySize).fill(value); 
-    		const data = 4;  
-    		const valueToFill = 'b';  
-    		console.log(fill(data, valueToFill))
-		</script>
+    		const data = prompt('Введите длину массива', '5'); 
+    		const valueToFill = prompt('Введите элементы массива:', 'b');  
+			document.write(`Массив длиной ${"[" + data + "]"}, заполненный элементами ${valueToFill}:<br>${"[" + fill(+data, valueToFill)+ "]"}`);
+    	</script>
 	</body>
 </html>

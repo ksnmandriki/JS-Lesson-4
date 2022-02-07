@@ -14,19 +14,32 @@
 должны работать быстро (т.е. вызов функции в браузере должен занимать не более доли секунды). Сохраните полученный 
 результат под именем index60.html. */
 
+let n = prompt("Введите порядковый номер числа Фибоначчи:", " только число").trim();
+if (isNaN(n) || n === ''|| n > 1000|| n == 0) {
+        alert("Это не число или ограничение <1000 ");
+        document.getElementsByName("alert").reload(window.location.reload());
+      }
+else{
 function fib1(n) {
-  let a = 1;
-  let b = 1;
-  for (let i = 3; i <= n; i++) {
-    let c = a + b;
-    a = b;
-    b = c;
+  let arr = [];
+  let arr1 = [];
+  if (n == 1) return 0
+  if (n == 2) return 1
+  if (n == 3) return 1
+  else{
+  arr[1] = 1;
+  arr[2] = 1;
+  for (let i = 4; i <= n; i++) {
+    arr1[0] = arr[1] + arr[2]; 
+    arr[1] = arr[2]; 
+    arr[2] = arr1[0]; 
   }
-  return b;
+  return arr1[0];
+  }
 }
-window.alert(fib1(1000));
-
-
+window.alert(`Число Фибоначчи: ${"[" + fib1(n) + "]"}.`)
+}
+/*
 let SQRT5 = Math.sqrt(5);
 let PHI = (SQRT5 + 1) / 2;
 
@@ -34,7 +47,9 @@ function fib2(n){
 	
     return Math.pow(PHI, n) / SQRT5 + 0.5;
 }
+
 window.alert(fib2(1000).toFixed());
+*/
 		</script>
 	</body>
 </html>

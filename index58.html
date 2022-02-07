@@ -11,12 +11,15 @@
 			/**Есть разреженный массив  [5, , 2,  , 18].  С  помощью  цикла  for выведите  все  элементы  этого  
 			 * массива. Сохраните полученный результат под именем index58.html.*/
 			let arr1 = [5, , 2,  , 18];
-			let arr = [];
+			//let arr = [];
+			window.alert(`Массив изначальный: ${"[" + arr1 + "]"}.`)
 			for (let i = 0; i < arr1.length; i++) {
-				console.log(arr1[i]);  
-            }              
-            window.alert(arr1);  
-			//window.alert(arr1); 
-		</script>
+				if (arr1[i] == undefined)
+					console.log(`Элемент № ${(i + 1)} = "Пустой элемент"`);
+				else
+					console.log(`Элемент № ${(i + 1)} = ${arr1[i]}`);
+            } 
+			window.alert(`В консоль вывело массив циклом for: ${"[" + arr1 + "]"}.`)              
+        </script>
 	</body>
 </html>
